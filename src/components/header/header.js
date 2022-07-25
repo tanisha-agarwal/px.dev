@@ -21,10 +21,10 @@ import { Link } from 'gatsby';
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import BodyClassName from 'react-body-classname';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
-import styles from './header.module.scss';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import * as styles from './header.module.scss';
 
 import docs from '../../images/footer/docs-icon.svg';
 import github from '../../images/footer/github-icon.svg';
@@ -228,9 +228,9 @@ const Header = ({ whiteHeader, transparentMenu }) => {
               </li>
             </ul>
 
-            <Link to='https://www.linuxfoundation.org/terms'>Terms of Service</Link>
+            <a href='https://www.linuxfoundation.org/terms'>Terms of Service</a>
             <br />
-            <Link to='https://www.linuxfoundation.org/privacy'>Privacy Policy</Link>
+            <a href='https://www.linuxfoundation.org/privacy'>Privacy Policy</a>
           </div>
         </div>
         <IconButton onClick={() => setOpen(true)} className='hide-desktop'>
